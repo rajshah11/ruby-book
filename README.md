@@ -1,70 +1,53 @@
-# ruby-book README
+# RubyBook
 
-This is the README for your extension "ruby-book". After writing up a brief description, we recommend including the following sections.
+RubyBook is a VSCode extension that provides a notebook interface for Ruby code. :notebook:
+This extension spawns a `pry` process in the background to allow users to create experiences with connected, executable Ruby cells and informational Markdown cells. :tada:
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- Run Ruby code within cells
+- Organize multiple cells in a file with data flowing from one cell to the next
+- Use Markdown to create human-readable cells documentating the code
+- Uses the power of pry to run code and maintain variables and results between multiple cells.
 
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+\
+![RubyBook Demo](./docs/images/demo.gif)
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+### [ruby](https://www.ruby-lang.org/en/documentation/installation/)
 
+### [pry](https://github.com/pry/pry)
+
+Note: The extension spawns a process by just running `pry`, so please make sure that `pry` is installed properly and added to the PATH. Easiest way to check is to run `pry` from terminal.
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+**No settings, as of now.** Configuration settings like execution timeouts, polling interval for output, etc. coming soon. Currently, the execution does not timeout and tries to run forever. The `pry` process is polled for output every 500 ms.
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+- The extension adopts a little hacky method to poll for completion of a code cell. It checks for the existence of the `pry` prompt (for ex., `[2] pry(main)> `) instead of gracefully inspecting Node.js I/O streams.
+- No configuration settings for execution timeouts or polling intervals. Note: You can stop execution of a command through the VSCode UI.
 
+## Feature Ideas
+- Short-term
+
+  - Configuration settings
+  - Add comments in the extension code
+  - Add example `.rubybook` files
+
+- Medium-term
+
+  - A custom renderer to colorize and pretty print output and errors for code execution cells
+
+- Long-term
+  - Use an existing [Debbugger Adapter Protocol](https://microsoft.github.io/debug-adapter-protocol/) like [byebug-dap](https://gitlab.com/firelizzard/byebug-dap) or work on a new one to potentially add debugging support for the extension 
+
+**If you have any issues, bugs or suggestions, please feel free to create a [Github issue](https://github.com/rajshah11/ruby-book/issues)**
+
+**If you are willing contribute, please start a discussion and feel free to create a [pull request](https://github.com/rajshah11/ruby-book/compare)**
 ## Release Notes
-
-Users appreciate release notes as you update your extension.
 
 ### 1.0.0
 
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Initial release of RubyBook :tada:

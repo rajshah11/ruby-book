@@ -1,8 +1,8 @@
 {
 	"name": "ruby-book",
 	"displayName": "RubyBook",
-	"description": "A simple Jupyter-like notebook for Ruby code",
-	"version": "0.0.1",
+	"description": "RubyBook is a VSCode extension that provides a notebook interface for Ruby code.",
+	"version": "1.0.0",
 	"engines": {
 		"vscode": "^1.66.0"
 	},
@@ -10,17 +10,10 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:ruby-book.helloWorld",
 		"onNotebook:ruby-book"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
-		"commands": [
-			{
-				"command": "ruby-book.helloWorld",
-				"title": "Hello World"
-			}
-		],
 		"notebooks": [
 			{
 				"id": "ruby-book",

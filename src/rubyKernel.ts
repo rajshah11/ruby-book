@@ -4,11 +4,6 @@ import * as fs from 'fs';
 import * as PATH from 'path';
 import * as os from 'os';
 import { waitUntil, WAIT_FOREVER } from 'async-wait-until';
-import { stderr, stdout } from 'process';
-import { Readable } from 'stream';
-import { threadId } from 'worker_threads';
-import { resolve } from 'path';
-import { rejects } from 'assert';
 const rmdir = require('rimraf');
 
 export class RubyKernel {
