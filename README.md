@@ -26,6 +26,13 @@ This extension spawns a `pry` process in the background to allow users to create
 
 Note: The extension spawns a process by just running `pry`, so please make sure that `pry` is installed properly and added to the PATH. Easiest way to check is to run `pry` from terminal.
 
+## Installation
+
+Search 'RubyBook' in the VSCode extensions tab
+
+RubyBook - [VSCode Extenstion URL](https://marketplace.visualstudio.com/items?itemName=rajshah11.ruby-book)
+
+[VSCode Extension Installation](https://code.visualstudio.com/docs/editor/extension-marketplace#_install-an-extension)
 ## Extension Settings
 
 **No settings, as of now.** Configuration settings like execution timeouts, polling interval for output, etc. coming soon. Currently, the execution does not timeout and tries to run forever. The `pry` process is polled for output every 500 ms.
