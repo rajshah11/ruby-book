@@ -4,6 +4,7 @@ import * as fs from 'fs';
 import * as PATH from 'path';
 import * as os from 'os';
 import { waitUntil, WAIT_FOREVER } from 'async-wait-until';
+import { kill } from 'process';
 const rmdir = require('rimraf');
 
 export class RubyKernel {
@@ -125,7 +126,14 @@ export class RubyKernel {
 			await Promise.race([waitPromise, cancellationPromise]);
 
 			if(cancellationToken.isCancellationRequested){
-				this.errorBuffer = 'Cancellation Requested!';
+				let killed = this.rubyRuntime.kill('SIGINT');
+				if (killed){
+					this.errorBuffer = 'Cancelled!';
+				}
+				else{
+					this.errorBuffer = `Cancellation requested, but killing the background process failed.` 
+					this.errorBuffer += `Please restart VSCode to avoid unintended results.`;
+				}
 			}
 			
 			return Promise.resolve([!cancellationToken.isCancellationRequested, this.outputBuffer, this.errorBuffer]);
