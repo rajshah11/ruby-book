@@ -40,7 +40,6 @@ RubyBook - [VSCode Extenstion URL](https://marketplace.visualstudio.com/items?it
 ## Known Issues
 
 - The extension adopts a little hacky method to poll for completion of a code cell. It checks for the existence of the `pry` prompt (for ex., `[2] pry(main)> `) instead of gracefully inspecting Node.js I/O streams.
-- Long running processes don't kill pry sometimes on interrupt signals. Fix coming soon.
 - No configuration settings for execution timeouts or polling intervals. Note: You can stop execution of a command through the VSCode UI.
 - Window not focused on a newly created RubyBook.
 

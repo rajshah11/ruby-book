@@ -7,6 +7,6 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [Unreleased]
 
 
-## [1.0.0] - 2022-05-29
+## [1.0.0] - 2022-05-30
 
 - Initial release
