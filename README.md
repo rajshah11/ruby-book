@@ -1,6 +1,7 @@
 # RubyBook
 
 RubyBook is a VSCode extension that provides a notebook interface for Ruby code. :notebook:
+
 This extension spawns a `pry` process in the background to allow users to create experiences with connected, executable Ruby cells and informational Markdown cells. :tada:
 
 ## Features
