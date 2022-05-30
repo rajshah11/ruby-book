@@ -7,9 +7,9 @@
 		"vscode": "^1.66.0"
 	},
 	"publisher": "rajshah11",
-  "repository": {
-    "url": "https://github.com/rajshah11/ruby-book"
-  },
+	"repository": {
+		"url": "https://github.com/rajshah11/ruby-book"
+	},
 	"categories": [
 		"Notebooks"
 	],
@@ -21,21 +21,21 @@
 	"main": "./dist/extension.js",
 	"contributes": {
 		"commands": [
-      {
-        "command": "ruby-book.newNotebook",
-        "title": "Create a new blank RubyBook",
-        "shortTitle": "RubyBook",
-        "category": "RubyBook"
-      }
-    ],
-    "menus": {
-      "file/newFile": [
-        {
-          "command": "ruby-book.newNotebook",
-          "group": "notebook"
-        }
-      ]
-    },
+			{
+				"command": "ruby-book.newNotebook",
+				"title": "Create a new blank RubyBook",
+				"shortTitle": "RubyBook",
+				"category": "RubyBook"
+			}
+		],
+		"menus": {
+			"file/newFile": [
+				{
+					"command": "ruby-book.newNotebook",
+					"group": "notebook"
+				}
+			]
+		},
 		"notebooks": [
 			{
 				"id": "ruby-book",
@@ -49,16 +49,17 @@
 			}
 		],
 		"languages": [
-      {
-        "id": "ruby-book",
+			{
+				"id": "ruby-book",
 				"extensions": [
 					".rubybook"
 				],
-        "aliases": [
-          "RubyBook", "rubybook"
-        ]
-      }
-    ]
+				"aliases": [
+					"RubyBook",
+					"rubybook"
+				]
+			}
+		]
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run package",
