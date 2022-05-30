@@ -1,7 +1,7 @@
 # RubyBook
 
 <p align="center">
-<img src="./docs/images/rubybook.png" width="72" height="72"/>
+<img src="./docs/images/rubybook.png" width="100" height="100"/>
 </p>
 
 RubyBook is a VSCode extension that provides a notebook interface for Ruby code. :notebook:
