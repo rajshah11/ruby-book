@@ -2,11 +2,6 @@
 
 All notable changes to the "ruby-book" extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
-## [Unreleased]
-
-
 ## [1.0.0] - 2022-05-30
 
 - Initial release
@@ -14,3 +9,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [1.0.1] - 2022-05-30
 
 - Updated demo GIF
+
+## [1.0.2] - 2022-06-10
+
+- Updated README.md

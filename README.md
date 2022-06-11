@@ -8,6 +8,10 @@ RubyBook is a VSCode extension that provides a notebook interface for Ruby code.
 
 This extension spawns a `pry` process in the background to allow users to create experiences with connected, executable Ruby cells and informational Markdown cells. :tada:
 
+### Currently, this extension works for Mac and Linux systems only.
+
+#### I am currently restructuring this extenion to make it work for Windows systems.
+
 ## Features
 
 - Run Ruby code within cells
@@ -19,6 +23,8 @@ This extension spawns a `pry` process in the background to allow users to create
 ![RubyBook Demo](./docs/images/demo.gif)
 
 ## Requirements
+
+### Mac or Linux system
 
 ### [ruby](https://www.ruby-lang.org/en/documentation/installation/)
 
@@ -33,6 +39,12 @@ Search 'RubyBook' in the VSCode extensions tab
 RubyBook - [VSCode Extenstion URL](https://marketplace.visualstudio.com/items?itemName=rajshah11.ruby-book)
 
 [VSCode Extension Installation](https://code.visualstudio.com/docs/editor/extension-marketplace#_install-an-extension)
+
+## How to use
+
+- Open or create a file with the extension `.rubybook`
+- Search for `RubyBook` in the VSCode command palette
+
 ## Extension Settings
 
 **No settings, as of now.** Configuration settings like execution timeouts, polling interval for output, etc. coming soon. Currently, the execution does not timeout and tries to run forever. The `pry` process is polled for output every 500 ms.
