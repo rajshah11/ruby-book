@@ -2,7 +2,7 @@
 	"name": "ruby-book",
 	"displayName": "RubyBook",
 	"description": "RubyBook is a VSCode extension that provides a notebook interface for Ruby code.",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"engines": {
 		"vscode": "^1.66.0"
 	},
