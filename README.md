@@ -10,8 +10,6 @@ This extension spawns a `pry` process in the background to allow users to create
 
 ### Currently, this extension works for Mac and Linux systems only.
 
-#### I am currently restructuring this extenion to make it work for Windows systems.
-
 ## Features
 
 - Run Ruby code within cells
